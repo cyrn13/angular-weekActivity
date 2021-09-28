@@ -1,0 +1,34 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+            <div class="card">
+                <div class="card-header bg-dark text-white">
+                    <div>
+                        <h1>List of  Green House Boarders</h1>
+                    </div>
+                    
+                </div>
+                <div class="card-header">
+                    <div class="buttons">
+                        <button class="btn btn-success" (click)="showFemale()">Female</button>
+                        <button class="btn btn-dark" (click)="showMale()">Male</button>
+                        <button class="btn btn-info" (click)="showAll()">All</button>
+                    </div>
+                </div>
+                <div class="card-body bg-secondary text-white">
+                    <div data-bs-spy="scroll" data-bs-target="" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                        <ul class="list-group list-group-numbered">
+                            <li *ngFor="let boarder of output" class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">{{ boarder.name }}</div>
+                                    {{ boarder.age }} years old
+                                </div>
+                                <span class="badge bg-danger">{{ boarder.room }}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
